@@ -1,0 +1,37 @@
+.h-wrapper{
+    color: white;
+}
+
+.h-container{
+    flex-direction: row;
+    justify-content: start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.h-menu{
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
+.h-menu>*:hover{
+    cursor: pointer;
+}
+
+
+.title-text{
+    font-size: 2rem;
+    z-index:2;
+}
+
+.logo-wrapper{
+    position: relative;
+    padding-right: 1rem;
+}
+
+.title-nav-container{
+    display:flex;
+    justify-content: space-between;
+    flex: 1;
+}

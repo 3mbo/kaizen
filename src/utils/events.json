@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Community Meetup",
+        "date": "2024-11-05",
+        "description": "Join us for a community gathering to discuss local initiatives  sssssss sssssssssssssss ."
+    },
+    {
+        "id": 2,
+        "title": "Holiday Party",
+        "date": "2024-12-21",
+        "description": "Celebrate the holidays with us at the annual party."
+    },
+    {
+        "id": 3,
+        "title": "Workshop",
+        "date": "2024-10-30",
+        "description": "A hands-on workshop to learn the basics."
+    },
+        {
+        "id": 4,
+        "title": "Community Meetup",
+        "date": "2024-10-05",
+        "description": "Join us for a community gathering to discuss local initiatives  sssssss sssssssssssssss ."
+    },
+    {
+        "id": 5,
+        "title": "Holiday Party",
+        "date": "2024-12-24",
+        "description": "Celebrate the holidays with us at the annual party."
+    },
+    {
+        "id": 6,
+        "title": "Workshop",
+        "date": "2024-10-20",
+        "description": "A hands-on workshop to learn the basics."
+    }
+]
