@@ -19,7 +19,7 @@
 }
 .e-list {
     max-height: 29rem;
-    width: 35rem;
+    width: 30rem;
     overflow-y: auto;
     border: solid 2px #f0f0f0;
     padding: 1rem;
@@ -70,7 +70,7 @@
 .react-calendar {
     background-color: #eaeaea;
     border: solid 2px #f0f0f0;
-    width: 35rem;
+    width: 38rem;
     height: 38rem;
     border-radius: 8px;
     color: #1f3e72;

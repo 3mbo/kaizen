@@ -1,27 +1,15 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Events.css';
+import eventsData from '../../utils/events.json';
 
 function Events() {
-    const [events, setEvents] = useState([]);
+    const [events, setEvents] = useState(eventsData); // Initialize state with imported JSON data
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [activeStartDate, setActiveStartDate] = useState(new Date());
     const scrollableListRef = useRef(null);
-
-    // Fetch events from the JSON file
-    useEffect(() => {
-        fetch('/events.json')
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then((data) => setEvents(data))
-            .catch((error) => console.error('Error loading events:', error));
-    }, []);
 
     // Create a Date object for the specified date in local time
     const parseDate = (dateString) => {
