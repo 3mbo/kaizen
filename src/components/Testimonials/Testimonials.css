@@ -53,18 +53,18 @@
     color: blue;
     border: none;
     border-radius: 5px;
-    background-color: white; /* Default background */
+    background-color: white;
     cursor: pointer;
-    transition: background-color 300ms ease; /* Smooth transition for background change */
+    transition: background-color 300ms ease;
 }
 
 .r-buttons button.greyed-out {
-    background-color: lightgrey; /* Greyed-out background */
-    color: darkgrey; /* Optional: Grey text for greyed-out buttons */
-    box-shadow: none; /* Remove shadow */
-    cursor: default; /* Change cursor to indicate disabled state */
+    background-color: lightgrey;
+    color: darkgrey;
+    box-shadow: none;
+    cursor: default;
 }
 
 .r-buttons button.greyed-out:hover {
-    background-color: lightgrey; /* Maintain the greyed-out appearance on hover */
+    background-color: lightgrey;
 }

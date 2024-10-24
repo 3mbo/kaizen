@@ -7,21 +7,26 @@ function Events() {
     const [events, setEvents] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedEvent, setSelectedEvent] = useState(null);
-    const [activeStartDate, setActiveStartDate] = useState(new Date()); // Track the calendar's active start date
+    const [activeStartDate, setActiveStartDate] = useState(new Date());
     const scrollableListRef = useRef(null);
 
     // Fetch events from the JSON file
     useEffect(() => {
-        fetch('/src/utils/events.json')
-            .then((response) => response.json())
+        fetch('/events.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then((data) => setEvents(data))
             .catch((error) => console.error('Error loading events:', error));
     }, []);
 
     // Create a Date object for the specified date in local time
     const parseDate = (dateString) => {
-        const dateParts = dateString.split('-'); // Assuming date format is YYYY-MM-DD
-        return new Date(dateParts[0], dateParts[1] - 1, dateParts[2]); // Month is 0-indexed
+        const dateParts = dateString.split('-');
+        return new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
     };
 
     // Handle selecting an event from the list
@@ -74,7 +79,7 @@ function Events() {
                 <div className="list-wrapper">
                     <span className="orangeText">Events</span>
                     <span className="primaryText">Schedule</span>
-                    <span className="secondaryText">Description goes here ddddd</span>
+                    <span className="secondaryText">Description goes here</span>
                     <div className="e-list">
                         <div className="scrollable-list" ref={scrollableListRef}>
                             {events
@@ -106,7 +111,7 @@ function Events() {
                                 : null
                         }
                         activeStartDate={activeStartDate}
-                        onActiveStartDateChange={handleActiveStartDateChange} // Track month/year changes
+                        onActiveStartDateChange={handleActiveStartDateChange}
                     />
                 </div>
             </div>
